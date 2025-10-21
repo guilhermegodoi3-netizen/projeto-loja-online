@@ -12,8 +12,10 @@ function atualizaCarrinho(){
     carrinho.forEach((item, index) => {
         li = document.createElement("li");
         li.innerHTML = item.nome + " - " + item.preco;
-        listaCarrinho.appendChild(li)
-});
+        listaCarrinho.appendChild(li);
+        total += itemm.preco;
+    });
+    totalTexto.innerHTML = "Total R$: " + total.toFixed(2);
 
 }
 
@@ -21,7 +23,7 @@ function atualizaCarrinho(){
 botoesAdicionar.forEach(botao => {
     botao.addEventListener("click", () => {
         const nome = botao.getAttribute("data-nome");
-        const preco = botao.getAttribute("data-preco");
+        const preco = parseFloat(botao.getAttribute("data-preco"));
 
         const items = {nome, preco}
         carrinho.push(items)
