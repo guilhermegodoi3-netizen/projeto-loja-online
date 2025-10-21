@@ -1,2 +1,2 @@
 # projeto-loja-online
-uma lojinha online simples :D
+uma lojinha online simples 
